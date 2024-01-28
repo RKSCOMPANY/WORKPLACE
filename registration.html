@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WORKPLACE2</title>
+    
+    
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+   
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="stylesheet" href="signup.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.2.0/crypto-js.min.js"  ></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+    
+    
+</head>
+
+
+<body>
+    <video id="background-video" autoplay loop muted poster><source src="ink 2.mp4" type="video/mp4"></video>
+
+    <header class="header">
+
+        <nav class="flexky" id="flexky">
+          <div class="flexky__button" id="btn-menu"><span></span><span></span><span></span></div>
+          <ul class="flexky__container" id="flexky-menu">
+            <li class="flexky__item"><a class="flexky__link" href="index.html">Home</a></li>
+            <li class="flexky__item"><a class="flexky__link" href="index.html#wrapper">How It Works</a></li>
+            <li class="flexky__item"><a class="flexky__link" href="index.html#categories2">Auditions</a></li>
+            <li class="flexky__item"><a class="flexky__link" href="#"><img class="flexky__img" src="skillsnauditions-high-resolution-logo-white-transparent (1).png"  alt="Logo" /></a></li>
+            <li class="flexky__item"><a class="flexky__link" href="skill&dev.html">Skill Development</a></li>
+            <li class="flexky__item"><a class="flexky__link" href="hiretalents.html">Hire Talents</a></li>
+            <li class="flexky__item"><a class="flexky__link" href="registration.html">Register</a></li>
+          </ul>
+        </nav>
+      </header>
+
+<main>
+
+ 
+    
+        <form class="well form-horizontal" action=" " method="post"  id="contact_form">
+    <fieldset>
+    
+    <!-- Form Name -->
+    <legend style="font-size: 27px; margin-bottom: 46px; border-bottom: 9px solid #e5e5e5;">To Get More Opportunities Register Now! </legend>
+    
+    <!-- Text input-->
+    
+    <div class="form-group">
+      <label class="col-md-4 control-label">First Name</label>  
+      <div class="col-md-4 inputGroupContainer">
+      <div class="input-group">
+      <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+      <input  name="first_name" placeholder="First Name" class="form-control"  type="text">
+        </div>
+      </div>
+    </div>
+    
+    <!-- Text input-->
+    
+    <div class="form-group">
+      <label class="col-md-4 control-label" >Last Name</label> 
+        <div class="col-md-4 inputGroupContainer">
+        <div class="input-group">
+      <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+      <input name="last_name" placeholder="Last Name" class="form-control"  type="text">
+        </div>
+      </div>
+    </div>
+    
+    <!-- Text input-->
+           <div class="form-group">
+      <label class="col-md-4 control-label">E-Mail</label>  
+        <div class="col-md-4 inputGroupContainer">
+        <div class="input-group">
+            <span class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></span>
+      <input name="email" placeholder="E-Mail Address" class="form-control"  type="text">
+        </div>
+      </div>
+    </div>
+    
+    
+    <!-- Text input-->
+           
+    <div class="form-group">
+      <label class="col-md-4 control-label">Phone </label>  
+        <div class="col-md-4 inputGroupContainer">
+        <div class="input-group">
+            <span class="input-group-addon"><i class="glyphicon glyphicon-earphone"></i></span>
+      <input name="phone" placeholder="(845)555-1212" class="form-control" type="text">
+        </div>
+      </div>
+    </div>
+
+    <div class="form-group">
+        <label class="col-md-4 control-label">Google Drive Link</label>  
+          <div class="col-md-4 inputGroupContainer">
+          <div class="input-group">
+              <span class="input-group-addon"><i class="glyphicon glyphicon-pencil"></i></span>
+        <input name="phone" placeholder="Portfolio Google Drive Link" class="form-control" type="text">
+          </div>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label class="col-md-4 control-label">LinkedIn </label>  
+          <div class="col-md-4 inputGroupContainer">
+          <div class="input-group">
+              <span class="input-group-addon"><i class="glyphicon glyphicon-pencil"></i></span>
+        <input name="phone" placeholder="LinkedIn Profile Link" class="form-control" type="text">
+          </div>
+        </div>
+      </div>
+
+      
+   
+      
+  
+    
+    <!-- Success message -->
+    <div class="alert alert-success" style="display:none;" role="alert" id="success_message">Success <i class="glyphicon glyphicon-thumbs-up"></i> Thanks for Registration . New opportunities will be emailed to you  </div>
+    
+    <!-- Button -->
+    <div class="form-group">
+      <label class="col-md-4 control-label"></label>
+      <div class="col-md-4">
+        <button style="font-size: 20px;" id="submit"  type="submit" class="btn btn-warning" >Send <span class="glyphicon glyphicon-send"></span></button>
+      </div>
+    </div>
+    
+    </fieldset>
+    </form>
+    
+
+
+
+
+<script>
+    
+    var xyz = document.getElementById("submittn") ;
+
+    function SUCCESSFULLY(){
+        var x = document.getElementById("success_message");
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "none";
+  }
+ alert("Registered");
+
+}
+
+
+
+
+</script>
+
+
+
+
+
+
+
+
+
+
+</main>
+    
+<script >
+    window.addEventListener("load", () => {
+    let flexky = document.getElementById("flexky"),
+        open = document.getElementById("btn-menu"),
+        menu = document.getElementById("flexky-menu");
+    if (window.pageYOffset > 100) flexky.classList.add("flexky--scroll");
+    window.addEventListener("scroll", () => {
+        window.pageYOffset > 100 && window.innerWidth > 900 ? flexky.classList.add("flexky--scroll") : flexky.classList.remove("flexky--scroll");
+    });
+    open.addEventListener("click", () => {
+        menu.classList.toggle("flexky__container--active");
+    });
+});
+</script>
+
+
+<footer>
+    <div class="tool">
+    <h2>Skills N Auditions</h2>
+    <p> Our goal is to help everyone and find their way to success in the entertainment industry by offering essential skills and guidance.We’re breaking down financial barriers by providing audition information free of charge, ensuring that financial constraints do not hinder anyone's journey to stardom.</p>
+    </div>
+  
+    <div class="tool2">
+        <ul>
+            <li><a href="aboutus.html">About Us</a></li>
+            <li><a href="Privacypolicy.html">Privacy Policy</a></li>
+            <li><a href="terms&conditions.html">Terms & Conditions</a></li>
+            <li><a href="conatctus.html">Contact Us</a></li>
+
+        </ul>
+    </div>
+    <hr>
+    <p class="rights">All rights reserved.</p>
+
+
+    
+  </footer>
+  
+
+</body>
+
+
+</html>

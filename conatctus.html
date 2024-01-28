@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WORKPLACE2</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    
+    <link rel="stylesheet" href="skill.css">
+
+
+
+    
+</head>
+<body>
+    <video id="background-video" autoplay loop muted poster><source src="ink 2.mp4" type="video/mp4"></video>
+
+    <header class="header">
+
+        <nav class="flexky" id="flexky">
+          <div class="flexky__button" id="btn-menu"><span></span><span></span><span></span></div>
+          <ul class="flexky__container" id="flexky-menu">
+            <li class="flexky__item"><a class="flexky__link" href="index.html">Home</a></li>
+            <li class="flexky__item"><a class="flexky__link" href="index.html#wrapper">How It Works</a></li>
+            <li class="flexky__item"><a class="flexky__link" href="index.html#categories2">Auditions</a></li>
+            <li class="flexky__item"><a class="flexky__link" href="#"><img class="flexky__img" src="skillsnauditions-high-resolution-logo-white-transparent (1).png"  alt="Logo" /></a></li>
+            <li class="flexky__item"><a class="flexky__link" href="skill&dev.html">Skill Development</a></li>
+            <li class="flexky__item"><a class="flexky__link" href="hiretalents.html">Hire Talents</a></li>
+            <li class="flexky__item"><a class="flexky__link" href="registration.html">Sign-Up</a></li>
+          </ul>
+        </nav>
+      </header>
+
+      <main >
+        
+        <div class="body">
+            <div class="container">
+             <center> <h1 class="skills">Contact-us</h1> </center>
+             <center> <h2 class="skills">We'd love to hear from you!</h2> </center>
+              <form method="POST" name="Contact-us">
+                <ul class="flex-outer">
+                  <li>
+                    <label for="first-name">Name</label>
+                    <input type="text" name="NAME" id="first-name" placeholder="Name">
+                  </li>
+    
+                  <li>
+                    <label for="email">Email</label>
+                    <input type="email" name="email" id="email" placeholder=" Email ">
+                  </li>
+                
+    
+                    
+    
+                  <li>
+                    <label for="message">Message</label>
+                    <textarea rows="6" name="Message" id="message" placeholder="Enter your message here"></textarea>
+                  </li>
+    
+                
+                 
+                  <li>
+                    <button type="submit">Submit</button>
+                  </li>
+                </ul>
+              </form>
+            </div>
+              
+            </div>
+    
+
+        <script>
+            const scriptURL = 'https://script.google.com/macros/s/AKfycbx5lJCTbUoWahv5ZW-7FVMyw1TEZ5X4Yc_bYHvtPmbRAA9vFJT-mnFdlt-Y-XfGf5n4/exec'
+  
+            const form = document.forms['Contact-us']
+        
+            form.addEventListener('submit', e => {
+              e.preventDefault()
+              fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+                .then(response => alert("Thanks for filling the form ! Our team will contact you soon."))
+                .catch(error => console.error('Error!', error.message))
+            })
+          </script>
+  
+</main>
+
+
+    <footer>
+        <div class="tool">
+        <h2>Skills N Auditions</h2>
+        <p> Our goal is to help everyone and find their way to success in the entertainment industry by offering essential skills and guidance.We’re breaking down financial barriers by providing audition information free of charge, ensuring that financial constraints do not hinder anyone's journey to stardom.</p>
+        </div>
+      
+        <div class="tool2">
+            <ul>
+                <li><a href="aboutus.html">About Us</a></li>
+                <li><a href="Privacypolicy.html">Privacy Policy</a></li>
+                <li><a href="terms&conditions.html">Terms & Conditions</a></li>
+                <li><a href="conatctus.html">Contact Us</a></li>
+
+            </ul>
+        </div>
+        <hr>
+        <p class="rights">All rights reserved.</p>
+
+
+        
+      </footer>
+      
+
+
+
+        <script >
+            window.addEventListener("load", () => {
+            let flexky = document.getElementById("flexky"),
+                open = document.getElementById("btn-menu"),
+                menu = document.getElementById("flexky-menu");
+            if (window.pageYOffset > 100) flexky.classList.add("flexky--scroll");
+            window.addEventListener("scroll", () => {
+                window.pageYOffset > 100 && window.innerWidth > 900 ? flexky.classList.add("flexky--scroll") : flexky.classList.remove("flexky--scroll");
+            });
+            open.addEventListener("click", () => {
+                menu.classList.toggle("flexky__container--active");
+            });
+        });
+        </script>
+      
+      </body>
+
+
+      </html>

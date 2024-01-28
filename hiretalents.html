@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WORKPLACE2</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="skill.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+
+
+    
+    
+</head>
+<body>
+    <video id="background-video" autoplay loop muted poster><source src="ink 2.mp4" type="video/mp4"></video>
+
+    <header class="header">
+
+        <nav class="flexky" id="flexky">
+          <div class="flexky__button" id="btn-menu"><span></span><span></span><span></span></div>
+          <ul class="flexky__container" id="flexky-menu">
+            <li class="flexky__item"><a class="flexky__link" href="index.html">Home</a></li>
+            <li class="flexky__item"><a class="flexky__link" href="index.html#wrapper">How It Works</a></li>
+            <li class="flexky__item"><a class="flexky__link" href="index.html#categories2">Auditions</a></li>
+            <li class="flexky__item"><a class="flexky__link" href="#"><img class="flexky__img" src="skillsnauditions-high-resolution-logo-white-transparent (1).png"  alt="Logo" /></a></li>
+            <li class="flexky__item"><a class="flexky__link" href="skill&dev.html">Skill Development</a></li>
+            <li class="flexky__item"><a class="flexky__link" href="hiretalents.html">Hire Talents</a></li>
+            <li class="flexky__item"><a class="flexky__link" href="registration.html">Sign-Up</a></li>
+          </ul>
+        </nav>
+      </header>
+
+<main>
+  
+    <center>
+        <section id="features">
+          <h1 style="  font-weight: 800;">Hire from SkillsNAuditions</h1>
+          <p style="font-size: 1.4rem;">Partner with us today and elevate your audition management!</p>
+          <div class="fea-base">
+             
+               <div class="fea-box">
+                  
+                  <h3>Simplified Audition Management</h3>
+                  <p>Share your audition details with us, and we'll showcase them on our website with a direct link to your application. Say goodbye to the hassle of managing multiple platforms for auditions – we've got it covered!
+                  </p>
+              </div>
+            
+           
+              <div class="fea-box">
+                  
+                  <h3>Applicant Information Management</h3>
+                  <p> We'll efficiently handle the details of applicants who apply through our platform and provide you with this information within approximately five days. This way, you can focus on what matters most – discovering talent.
+                </p>
+              </div>
+         
+               <div class="fea-box">
+                  
+                  <h3>Collaborative Partnership</h3>
+                  <p>To kickstart our partnership, we're offering a few months of free access to our platform. Take advantage of this opportunity to explore all the features and benefits SkillNAuditions has to offer.
+                </p>
+              </div>
+    
+
+            
+        </div>
+        
+        
+        </section>
+        </center>
+
+
+    <div class="body">
+        <div class="container">
+         <center> <h1 class="skills">Fill the form for advertising the auditions/events</h1> </center>
+          <form method="POST" name="Hire-talents">
+            <ul class="flex-outer">
+              <li>
+                <label for="first-name">Job title</label>
+                <input type="text" name="Job-title" id="first-name" placeholder="Enter the Job title here">
+              </li>
+              <li>
+                <label for="last-name">Company Name</label>
+                <input type="text" name="Company-name" id="last-name" placeholder="Enter the company name here">
+              </li>
+              <li>
+                <label for="text">Location</label>
+                <input type="text" name="Location" id="email" placeholder="Enter the location of auditions here">
+              </li>
+              <li>
+                <label for="email">Email</label>
+                <input type="email" name="email" id="email" placeholder="Enter the company Email here">
+              </li>
+              <li>
+                <label for="phone">phone</label>
+                <input type="tel" id="phone" name="phone" placeholder="Enter the phone here">
+              </li>
+             
+              <li>
+                <label for="Age">Required Gender</label>
+                <input type="Age" name="Gender" id="Age" placeholder="Enter the required gender ">
+              </li>
+
+                <li>
+                <label for="Age">Required Age</label>
+                <input type="Age" name="Age" id="Age" placeholder="Enter the required age ">
+              </li>
+
+              <li>
+                <label for="message">Job Description</label>
+                <textarea rows="6" name="job-description" id="message" placeholder="Enter your message here"></textarea>
+              </li>
+
+            
+             
+              <li>
+                <button type="submit">Submit</button>
+              </li>
+            </ul>
+          </form>
+        </div>
+          
+        </div>
+
+
+
+        <script>
+          const scriptURL = 'https://script.google.com/macros/s/AKfycbwT69DpRuYQMljYmTf74mFp6JkZBJhLTxfAUWlyRT2j7zc1dOaX-yaSeiMsAM-4zggE/exec'
+
+          const form = document.forms['Hire-talents']
+      
+          form.addEventListener('submit', e => {
+            e.preventDefault()
+            fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+              .then(response => alert("Thanks for filling the form ! Our team will contact you soon."))
+              .catch(error => console.error('Error!', error.message))
+          })
+
+          
+        </script>
+
+
+
+
+
+</main>
+    
+<script>
+    window.addEventListener("load", () => {
+    let flexky = document.getElementById("flexky"),
+        open = document.getElementById("btn-menu"),
+        menu = document.getElementById("flexky-menu");
+    if (window.pageYOffset > 100) flexky.classList.add("flexky--scroll");
+    window.addEventListener("scroll", () => {
+        window.pageYOffset > 100 && window.innerWidth > 900 ? flexky.classList.add("flexky--scroll") : flexky.classList.remove("flexky--scroll");
+    });
+    open.addEventListener("click", () => {
+        menu.classList.toggle("flexky__container--active");
+    });
+});
+</script>
+
+
+
+<footer>
+    <div class="tool">
+    <h2>Skills N Auditions</h2>
+    <p> Our goal is to help everyone and find their way to success in the entertainment industry by offering essential skills and guidance.We’re breaking down financial barriers by providing audition information free of charge, ensuring that financial constraints do not hinder anyone's journey to stardom.</p>
+    </div>
+  
+    <div class="tool2">
+        <ul>
+            <li><a href="aboutus.html">About Us</a></li>
+            <li><a href="Privacypolicy.html">Privacy Policy</a></li>
+            <li><a href="terms&conditions.html">Terms & Conditions</a></li>
+            <li><a href="conatctus.html">Contact Us</a></li>
+
+        </ul>
+    </div>
+    <hr>
+    <p class="rights">All rights reserved.</p>
+
+
+    
+  </footer>
+  
+
+</body>
+
+
+</html>

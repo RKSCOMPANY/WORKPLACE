@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WORKPLACE2</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style2.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="acting.css">
+    
+
+
+
+    
+    
+</head>
+<body>
+    <video id="background-video" autoplay loop muted poster><source src="ink 2.mp4" type="video/mp4"></video>
+
+    <header class="header">
+
+        <nav class="flexky" id="flexky">
+          <div class="flexky__button" id="btn-menu"><span></span><span></span><span></span></div>
+          <ul class="flexky__container" id="flexky-menu">
+            <li class="flexky__item"><a class="flexky__link" href="index.html">Home</a></li>
+            <li class="flexky__item"><a class="flexky__link" href="index.html#wrapper">How It Works</a></li>
+            <li class="flexky__item"><a class="flexky__link" href="index.html#categories2">Auditions</a></li>
+            <li class="flexky__item"><a class="flexky__link" href="#"><img class="flexky__img" src="skillsnauditions-high-resolution-logo-white-transparent (1).png"  alt="Logo" /></a></li>
+            <li class="flexky__item"><a class="flexky__link" href="skill&dev.html">Skill Development</a></li>
+            <li class="flexky__item"><a class="flexky__link" href="hiretalents.html">Hire Talents</a></li>
+            <li class="flexky__item"><a class="flexky__link" href="registration.html">Sign-Up</a></li>
+          </ul>
+        </nav>
+      </header>
+
+<main>
+
+   <center><h2 class="sub1" class="sub" >LATEST ACTING AUDITIONS</h2>
+   <div class="search-bar">
+    <input type="text" id="search-input" placeholder="Search jobs...">
+    <button id="search-button">Search</button></center>
+</div>
+<div class="body">
+    <div class="container1">
+        <h1>Job Title</h1>
+        <h2>Company Name</h2>
+        <p>Location - Delhi/Mumbai
+        </p>
+        <div class="description2">
+            <h3>Required teen & youngster male model/actor for tv commercial and ott films.
+                Age - 16-38 years</h3>
+            <p>Skills - Must have good acting/modelling skills.
+                Must be good looking, upmarket, talented and smart.
+                Interested candidates may apply to get a call from us.</p>
+        </div>
+        <a href="apply-link" class="apply-button">Apply Now</a>
+    </div>
+</div>
+<div class="body">
+    <div class="container1">
+        <h1> Title</h1>
+        <h2>Company Name</h2>
+        <p>Location - Delhi
+        </p>
+        <div class="description2">
+            <h3>Required teen & youngster male model/actor for tv commercial and ott films.
+                Age - 16-38 years</h3>
+            <p>Skills - Must have good acting/modelling skills.
+                Must be good looking, upmarket, talented and smart.
+                Interested candidates may apply to get a call from us.</p>
+        </div>
+        <a href="apply-link" class="apply-button">Apply Now</a>
+    </div>
+</div>
+<div class="body">
+    <div class="container1">
+        <h1>Job Title</h1>
+        <h2> Name</h2>
+        <p>Location - jaipur
+        </p>
+        <div class="description2">
+            <h3>Required teen & youngster male model/actor for tv commercial and ott films.
+                Age - 16-38 years</h3>
+            <p>Skills - Must have good acting/modelling skills.
+                Must be good looking, upmarket, talented and smart.
+                Interested candidates may apply to get a call from us.</p>
+        </div>
+        <a href="apply-link" class="apply-button">Apply Now</a>
+    </div>
+</div>
+<div class="body">
+    <div class="container1">
+        <h1>Job </h1>
+        <h2>Company Name</h2>
+        <p>Location - mumbai
+        </p>
+        <div class="description2">
+            <h3>Required teen & youngster male model/actor for tv commercial and ott films.
+                Age - 16-38 years</h3>
+            <p>Skills - Must have good acting/modelling skills.
+                Must be good looking, upmarket, talented and smart.
+                Interested candidates may apply to get a call from us.</p>
+        </div>
+        <a href="apply-link" class="apply-button">Apply Now</a>
+    </div>
+</div>
+<div class="body">
+    <div class="container1">
+        <h1>Job Title</h1>
+        <h2>RAGHAV</h2>
+        <p>rajasthan
+        </p>
+        <div class="description2">
+            <h3>Required teen & youngster male model/actor for tv commercial and ott films.
+                Age - 16-38 years</h3>
+            <p>Skills - Must have good acting/modelling skills.
+                Must be good looking, upmarket, talented and smart.
+                Interested candidates may apply to get a call from us.</p>
+        </div>
+        <a href="apply-link" class="apply-button">Apply Now</a>
+    </div>
+</div>
+<script>
+document.getElementById('search-button').addEventListener('click', function() {
+    const searchText = document.getElementById('search-input').value.toLowerCase();
+    const jobContainers = document.getElementsByClassName('container1');
+
+    for (let i = 0; i < jobContainers.length; i++) {
+        const jobTitle = jobContainers[i].getElementsByTagName('h1')[0].innerText.toLowerCase();
+        const companyName = jobContainers[i].getElementsByTagName('h2')[0].innerText.toLowerCase();
+        const Location = jobContainers[i].getElementsByTagName('p')[0].innerText.toLowerCase();
+        if (jobTitle.includes(searchText) || companyName.includes(searchText) || Location.includes(searchText) ) {
+            jobContainers[i].style.display = 'block';
+        } else {
+            jobContainers[i].style.display = 'none';
+        }
+    }
+});
+</script>
+</main>
+    
+<script >
+    window.addEventListener("load", () => {
+    let flexky = document.getElementById("flexky"),
+        open = document.getElementById("btn-menu"),
+        menu = document.getElementById("flexky-menu");
+    if (window.pageYOffset > 100) flexky.classList.add("flexky--scroll");
+    window.addEventListener("scroll", () => {
+        window.pageYOffset > 100 && window.innerWidth > 900 ? flexky.classList.add("flexky--scroll") : flexky.classList.remove("flexky--scroll");
+    });
+    open.addEventListener("click", () => {
+        menu.classList.toggle("flexky__container--active");
+    });
+});
+</script>
+
+
+<footer>
+    <div class="tool">
+    <h2>Skills N Auditions</h2>
+    <p> Our goal is to help everyone and find their way to success in the entertainment industry by offering essential skills and guidance.We’re breaking down financial barriers by providing audition information free of charge, ensuring that financial constraints do not hinder anyone's journey to stardom.</p>
+    </div>
+  
+    <div class="tool2">
+        <ul>
+            <li><a href="aboutus.html">About Us</a></li>
+            <li><a href="Privacypolicy.html">Privacy Policy</a></li>
+            <li><a href="terms&conditions.html">Terms & Conditions</a></li>
+            <li><a href="conatctus.html">Contact Us</a></li>
+
+        </ul>
+    </div>
+    <hr>
+    <p class="rights">All rights reserved.</p>
+
+
+    
+  </footer>
+  
+
+</body>
+
+
+</html>
